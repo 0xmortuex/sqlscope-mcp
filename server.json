@@ -1,0 +1,18 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.0xmortuex/sqlscope-mcp",
+  "description": "Explore and understand an SQLite database file, read-only by construction: schema graph, query plans, data-quality checks, generated docs.",
+  "repository": {
+    "url": "https://github.com/0xmortuex/sqlscope-mcp",
+    "source": "github"
+  },
+  "version": "0.1.0",
+  "packages": [
+    {
+      "registryType": "pypi",
+      "identifier": "sqlscope-mcp",
+      "version": "0.1.0",
+      "transport": { "type": "stdio" }
+    }
+  ]
+}

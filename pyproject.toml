@@ -1,0 +1,41 @@
+[project]
+name = "sqlscope-mcp"
+version = "0.1.0"
+description = "MCP server that lets an AI explore and understand an SQLite database file: read-only by construction, with schema graph, query plans, data-quality checks and generated docs."
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "0xmortuex" }]
+requires-python = ">=3.11"
+dependencies = [
+    "mcp>=2.0.0",
+]
+keywords = ["mcp", "sqlite", "sql", "schema", "data-quality", "read-only", "ai-agent"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Database",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=7", "anyio"]
+
+[project.urls]
+Homepage = "https://github.com/0xmortuex/sqlscope-mcp"
+
+[project.scripts]
+sqlscope-mcp = "sqlscope_mcp.server:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/sqlscope_mcp"]
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F"]
